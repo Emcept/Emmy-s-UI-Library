@@ -5,23 +5,22 @@
 ```
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
 ```
-<br />
-<br />
+
 ## Creating Window
 ```
 local Window = Library:CreateWindow("Title", "DarkTheme")
 ```
-<br />
+
 ## Updating Window
 ```
 Window:UpdateWindow("NewTitle", "PurpleTheme")
 ```
-<br />
+
 ## Removing Window
 ```
 Window:Remove()
 ```
-<br />
+
 ### Themes:
 
 > DarkTheme  
