@@ -37,12 +37,9 @@ Window:Remove()
 > 
 > PinkTheme
 > 
-> RedTheme
-> 
-> GreenTheme
-> 
-> OrangeTheme
-> 
+> RedTheme  
+> GreenTheme  
+> OrangeTheme  
 > TealTheme
 
 ## Getting Current Window's Theme
