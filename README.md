@@ -30,6 +30,7 @@ Window:Remove()
 > GreenTheme  
 > OrangeTheme  
 > TealTheme
+
 <br /><br /><br /><br />
 ## Getting Current Window's Theme
 ```
