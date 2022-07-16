@@ -1,5 +1,4 @@
-# Emmy's UI Library by Emmy#0377
-<br/ >
+# Emmy's UI Library by Emmy#0377 <br/ >
 ## Getting Loadstring
 ```
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
