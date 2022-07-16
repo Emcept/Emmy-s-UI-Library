@@ -27,16 +27,11 @@ Window:Remove()
 
 ### Themes:
 
-> DarkTheme
->
-> LightTheme
-> 
-> BlueTheme
-> 
-> PurpleTheme
-> 
-> PinkTheme
-> 
+> DarkTheme  
+> LightTheme  
+> BlueTheme  
+> PurpleTheme  
+> PinkTheme  
 > RedTheme  
 > GreenTheme  
 > OrangeTheme  
