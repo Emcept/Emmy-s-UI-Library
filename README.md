@@ -226,12 +226,12 @@ print(option)
 end
 ```
 
-## Adding an Option to the Dropdowns
+## Adding An Option To Your Dropdown
 ```
 Dropdown:AddOption("Maybe")
 ```
 
-## Removing an Option from Dropdowns
+## Removing An Option From Your Dropdown
 ```
 Dropdown:RemoveOption("No")
 ```
@@ -272,7 +272,7 @@ end)
 ColorPicker:Remove()
 ```
 
-## Adding a fully customizable UI
+## Adding A fully customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
 ```
 local theme = window:GetTheme()
