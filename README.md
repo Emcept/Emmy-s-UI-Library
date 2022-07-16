@@ -46,7 +46,7 @@ Window:SetTheme("BlueTheme")
 You can also add your own themes by using the code below. Change the colors to whatever you like.
 ```
 local NewTheme = {
-		TabColor = Color3.fromRGB(0, 0, 0),
+		TabColor = Color3.fromRGB(50, 50, 50),
 		ElementColor = Color3.fromRGB(70, 70, 70),
 		WindowColor = Color3.fromRGB(0, 0, 0),
 		TextColor = Color3.fromRGB(255, 255, 255),
