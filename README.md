@@ -54,6 +54,15 @@ local CurrentTheme = Window:GetTheme()
 ```
 Window:SetTheme("BlueTheme")
 ```
+You can also add your own themes by using the code below. Change the colors to whatever you like.
+```
+local NewTheme = {
+		TabColor = Color3.fromRGB(0, 0, 0),
+		ElementColor = Color3.fromRGB(30, 30, 30),
+		WindowColor = Color3.fromRGB(0, 0, 0),
+		TextColor = Color3.fromRGB(255, 255, 255),
+		ImageColor = Color3.fromRGB(70, 70, 70)
+	}
 
 
 
@@ -267,4 +276,18 @@ end)
 ## Removing Color Pickers
 ```
 ColorPicker:Remove()
+```
+
+## Adding a fully customizable UI
+You can also add an option to customize your UI by adding the code below to your tab.
+```
+local theme = window:GetTheme()
+
+for i, v in pairs(theme) do
+	Tab:AddColorPicker(i, "Changes "..i.."'s theme", v, function(color3)
+		theme = Window:GetTheme()
+		theme[i] = color3
+		Window:SetTheme(theme)
+	end)
+end
 ```
