@@ -58,12 +58,14 @@ You can also add your own themes by using the code below. Change the colors to w
 ```
 local NewTheme = {
 		TabColor = Color3.fromRGB(0, 0, 0),
-		ElementColor = Color3.fromRGB(30, 30, 30),
+		ElementColor = Color3.fromRGB(70, 70, 70),
 		WindowColor = Color3.fromRGB(0, 0, 0),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		ImageColor = Color3.fromRGB(70, 70, 70)
+		ImageColor = Color3.fromRGB(120, 120, 120)
 	}
-
+	
+Window:SetTheme(NewTheme)
+```
 
 
 
