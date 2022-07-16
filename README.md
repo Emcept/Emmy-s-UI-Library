@@ -196,5 +196,5 @@ print(color.R, color.G, color.B)
 end)```
 
 ## Removing Color Pickers
-`ColorPicker:Remove()`
+ColorPicker:Remove()
 
