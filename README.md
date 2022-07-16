@@ -1,6 +1,5 @@
-# Emmy's UI Library by Emmy#0377  
-  
-  
+# Emmy's UI Library by Emmy#0377
+<br\>
 
 ## Getting Loadstring
 ```
