@@ -72,7 +72,9 @@
 
 ## Creating Text Buttons
 `local TextButton = Tab:AddTextButton("ButtonText", "Button Info", function()`
+``
 `print("Clicked!")`
+``
 `end)`
 
 ## Updating Text Buttons
