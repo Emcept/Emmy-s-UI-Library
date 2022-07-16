@@ -40,3 +40,21 @@
 
 ## Changing Window's Theme
 `Window:SetTheme("BlueTheme")`
+
+
+
+## Creating Tab
+`local Tab = Window:AddTab("TabName")`
+
+## Updating Tab
+`Tab:UpdateTab("NewTabName")`
+
+## Removing Tab
+`Tab:Remove()`
+
+
+## Creating Label
+`local Label = Tab:AddTextLabel("LabelText")`
+
+## Updating Label
+`Label:UpdateTextLabel("NewLabelText")`
