@@ -8,7 +8,7 @@
 `local Window = Library:CreateWindow("Title", "DarkTheme")`
 
 ## Updating Window
-`Window:UpdateWindow("NewTitle", "PurpleTheme")
+`Window:UpdateWindow("NewTitle", "PurpleTheme")`
 
 ##### Themes:
 > DarkTheme
