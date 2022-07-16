@@ -1,3 +1,4 @@
+
 local lib = {}
 local rippleeffect = true
 
@@ -8,6 +9,8 @@ local menudb = false
 
 local allwindows = {}
 local alltabs = {}
+
+local uitoggled = false
 
 function dragify(Frame)
 	Frame.Active = true
@@ -81,10 +84,8 @@ local themes = {
 }
 
 
-
-
 function lib:CreateWindow(windowname, theme)
-	
+
 	local windowtemplate = Instance.new("ScreenGui")
 
 	local destroyed = false
@@ -92,7 +93,7 @@ function lib:CreateWindow(windowname, theme)
 	windowname = windowname or 'Window'
 	local window = {}
 	table.insert(lib, windowname)
-	
+
 	if table.find(allwindows, windowname) then
 		print('Please choose a different name for your window!')
 		return
@@ -132,7 +133,7 @@ function lib:CreateWindow(windowname, theme)
 			end
 		end
 	end
-	
+
 	function window:GetTheme()
 		return theme
 	end
@@ -143,7 +144,7 @@ function lib:CreateWindow(windowname, theme)
 	function window:SetTheme(newTheme)
 
 		theme = totheme(newTheme)
-		
+
 		local win = nil
 
 		win = windowtemplate
@@ -241,7 +242,7 @@ function lib:CreateWindow(windowname, theme)
 			end
 		end
 	end
-	
+
 
 	local function enableripple(v)
 		v.MouseButton1Click:Connect(function()
@@ -415,6 +416,16 @@ function lib:CreateWindow(windowname, theme)
 		windowtemplate.Background.Title.Text = tostring(newwindowname)
 	end
 
+	function window:ToggleUI()
+		if uitoggled == false then
+			windowtemplate.Enabled = false
+			uitoggled = true
+		else
+			windowtemplate.Enabled = true
+			uitoggled = false
+		end
+	end
+
 	function window:AddTab(tabname)
 		if windowtemplate.Background:FindFirstChild(tabname) or tabname == 'Menu' then
 			print(('Please choose a different name for your tab. (%s)'):format(tabname))
@@ -493,11 +504,11 @@ function lib:CreateWindow(windowname, theme)
 		else
 			menutemplate = windowtemplate.Background.Menu
 		end
-		
+
 		local function UpdateSize3()
 			local cS = menutemplate.UIListLayout.AbsoluteContentSize
 			game.TweenService:Create(menutemplate, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-				CanvasSize = UDim2.new(0,cS.X,0,cS.Y)
+				CanvasSize = UDim2.new(0, cS.X, 0, cS.Y)
 			}):Play()
 		end
 
@@ -547,13 +558,13 @@ function lib:CreateWindow(windowname, theme)
 
 		local function UpdateSize()
 			pcall(function()
-			if destroyed == false then
-				local cS = tabtemplate.Objects.UIListLayout.AbsoluteContentSize
-				game.TweenService:Create(tabtemplate.Objects, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-					CanvasSize = UDim2.new(0,cS.X,0,cS.Y)
-				}):Play()
+				if destroyed == false then
+					local cS = tabtemplate.Objects.UIListLayout.AbsoluteContentSize
+					game.TweenService:Create(tabtemplate.Objects, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+						CanvasSize = UDim2.new(0, cS.X, 0, cS.Y)
+					}):Play()
 				end
-				end)
+			end)
 		end
 
 		tabtemplate.Objects.ChildAdded:Connect(UpdateSize)
@@ -584,7 +595,7 @@ function lib:CreateWindow(windowname, theme)
 		UICorner.Parent = tabmenutemplate
 
 		tabmenutemplate.Parent = menutemplate
-		
+
 		UpdateSize3()
 
 		if first == nil then
@@ -593,13 +604,14 @@ function lib:CreateWindow(windowname, theme)
 		end
 
 		for i, v in pairs(windowtemplate.Background:GetChildren()) do
-			if v.Name == 'UICorner' or v.Name == 'CloseButton' or v.Name == 'InfoFrame' or v.Name == 'Title' or v.Name == 'Circle' or v.Name == 'Menu' or v.Name == 'DragScript' then else
+			if v.Name == 'UICorner' or v.Name == 'CloseButton' or v.Name == 'InfoFrame' or v.Name == 'Title' or v.Name == 'Circle' or v.Name == 'Menu' or v.Name == 'DragScript' then
+			else
 				if v.Name ~= first then
 					v.Visible = false
 				end
 			end
 		end
-		
+
 		local changing = nil
 
 
@@ -652,7 +664,7 @@ function lib:CreateWindow(windowname, theme)
 			tabmenutemplate.Name = tostring(text)
 			tabmenutemplate.Text = tostring(text)
 		end
-		
+
 		function tabs:Remove()
 			if table.find(alltabs, tabname) then
 				table.remove(alltabs, table.find(alltabs, tabname))
@@ -856,7 +868,7 @@ function lib:CreateWindow(windowname, theme)
 					if destroyed == false then
 						local cS = dropdowntemplate:FindFirstChild('Dropdown').Options.UIListLayout.AbsoluteContentSize
 						game.TweenService:Create(dropdowntemplate:FindFirstChild('Dropdown').Options, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-							CanvasSize = UDim2.new(0,cS.X,0,cS.Y)
+							CanvasSize = UDim2.new(0, cS.X, 0, cS.Y)
 						}):Play()
 					end
 				end)
@@ -1019,7 +1031,7 @@ function lib:CreateWindow(windowname, theme)
 					UpdateSize2()
 				end
 			end
-			
+
 			function dropdown:GetOptions()
 				local Options = {}
 				for i, v in pairs(dropdowntemplate.Dropdown.Options:GetChildren()) do
@@ -1518,7 +1530,7 @@ function lib:CreateWindow(windowname, theme)
 			TextBox.Size = UDim2.new(0, 99, 0, 22)
 			TextBox.ClearTextOnFocus = false
 			TextBox.Font = Enum.Font.Ubuntu
-			TextBox.PlaceholderColor3 = Color3.fromRGB(theme.TextColor.R-20, theme.TextColor.G-20, theme.TextColor.B-20)
+			TextBox.PlaceholderColor3 = Color3.fromRGB(theme.TextColor.R - 20, theme.TextColor.G - 20, theme.TextColor.B - 20)
 			TextBox.PlaceholderText = tostring(defaulttext)
 			TextBox.Text = ""
 			TextBox.TextColor3 = theme.TextColor
@@ -1587,7 +1599,8 @@ function lib:CreateWindow(windowname, theme)
 				inf = infoo or 'Information'
 			end
 			function textbox:Remove()
-				funv = function() end
+				funv = function()
+				end
 				textboxtemplate:Destroy()
 				UpdateSize()
 			end
@@ -1736,7 +1749,8 @@ function lib:CreateWindow(windowname, theme)
 				toggletemplate:WaitForChild('TextLabel').Text = tostring(textt)
 			end
 			function toggle:Remove()
-				funv = function() end
+				funv = function()
+				end
 				toggletemplate:Destroy()
 				UpdateSize()
 			end
@@ -1748,14 +1762,7 @@ function lib:CreateWindow(windowname, theme)
 			table.insert(keybind, text)
 			local funv = func
 			local inf = info or 'Information'
-			local key
-
-			if #startKey < 2 then
-				key = startKey:upper()
-			else
-				key = startKey
-			end
-
+			local key = startKey
 
 			-- Instances:
 
@@ -1835,21 +1842,11 @@ function lib:CreateWindow(windowname, theme)
 				choosing = true
 				local input = uis.InputBegan:Wait()
 				if input.KeyCode.Name ~= 'Unknown' and input.UserInputType == Enum.UserInputType.Keyboard then
-					if #input.KeyCode.Name < 2 then
-						keybindtemplate.Keybind.Text = input.KeyCode.Name:upper()
-						key = input.KeyCode.Name:upper()
-					else
-						keybindtemplate.Keybind.Text = input.KeyCode.Name
-						key = input.KeyCode.Name
-					end
+					key = input.KeyCode.Name
+					keybindtemplate.Keybind.Text = input.KeyCode.Name
 				else
-					if #key < 2 then
-						key = oldkey:upper()
-						keybindtemplate.Keybind.Text = key:upper()
-					else
-						key = oldkey
-						keybindtemplate.Keybind.Text = key
-					end
+					key = oldkey
+					keybindtemplate.Keybind.Text = key
 				end
 				wait()
 				choosing = false
@@ -1901,11 +1898,7 @@ function lib:CreateWindow(windowname, theme)
 
 			function keybind:UpdateKeybind(textt, infoo, startKeyy, funcc)
 				inf = infoo or 'Information'
-				if #startKeyy < 2 then
-					key = startKeyy:upper()
-				else
-					key = startKeyy
-				end
+				key = startKeyy
 				keybindtemplate.Keybind.Text = key
 				funv = funcc
 			end
@@ -1913,7 +1906,8 @@ function lib:CreateWindow(windowname, theme)
 			function keybind:Remove()
 				keybindtemplate:Destroy()
 				key = ''
-				funv = function() end
+				funv = function()
+				end
 				UpdateSize()
 			end
 			return keybind
@@ -2058,7 +2052,7 @@ function lib:CreateWindow(windowname, theme)
 			Apply.TextScaled = true
 			Apply.TextWrapped = true
 			Apply.AutoButtonColor = false
-			
+
 			enableripple(Apply)
 
 			UICorner.CornerRadius = UDim.new(0, 5)
@@ -2080,9 +2074,9 @@ function lib:CreateWindow(windowname, theme)
 			Cancel.TextScaled = true
 			Cancel.TextWrapped = true
 			Cancel.AutoButtonColor = false
-			
+
 			enableripple(Cancel)
-			
+
 			UICorner_2.CornerRadius = UDim.new(0, 5)
 			UICorner_2.Parent = Cancel
 
@@ -2157,39 +2151,51 @@ function lib:CreateWindow(windowname, theme)
 			local rgb = colorpickertemplate:WaitForChild("RGB")
 			local value = colorpickertemplate:WaitForChild("Value")
 			local preview = colorpickertemplate:WaitForChild("Preview")
-			local selectedColor = Color3.fromHSV(1,1,1)
-			local colorData = {1,1,1}
+			local selectedColor = Color3.fromHSV(1, 1, 1)
+			local colorData = {
+				1,
+				1,
+				1
+			}
 			local mouse1down = false
-			local function setColor(hue,sat,val)
-				colorData = {hue or colorData[1],sat or colorData[2],val or colorData[3]}
-				selectedColor = Color3.fromHSV(colorData[1],colorData[2],colorData[3])
+			local function setColor(hue, sat, val)
+				colorData = {
+					hue or colorData[1],
+					sat or colorData[2],
+					val or colorData[3]
+				}
+				selectedColor = Color3.fromHSV(colorData[1], colorData[2], colorData[3])
 				preview.BackgroundColor3 = selectedColor
-				value.ImageColor3 = Color3.fromHSV(colorData[1],colorData[2],1)
+				value.ImageColor3 = Color3.fromHSV(colorData[1], colorData[2], 1)
 			end
 			local function inBounds(frame)
-				local x,y = mouse.X - frame.AbsolutePosition.X,mouse.Y - frame.AbsolutePosition.Y
-				local maxX,maxY = frame.AbsoluteSize.X,frame.AbsoluteSize.Y
+				local x, y = mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y
+				local maxX, maxY = frame.AbsoluteSize.X, frame.AbsoluteSize.Y
 				if x >= 0 and y >= 0 and x <= maxX and y <= maxY then
-					return x/maxX,y/maxY
+					return x / maxX, y / maxY
 				end
 			end
 			local function updateRGB()
 				if mouse1down then
-					local x,y = inBounds(rgb)
+					local x, y = inBounds(rgb)
 					if x and y then
-						rgb:WaitForChild("Marker").Position = UDim2.new(x,0,y,0)
-						setColor(1 - x,1 - y)
+						rgb:WaitForChild("Marker").Position = UDim2.new(x, 0, y, 0)
+						setColor(1 - x, 1 - y)
 					end
-					local x,y = inBounds(value)
+					local x, y = inBounds(value)
 					if x and y then
-						value:WaitForChild("Marker").Position = UDim2.new(0.5,0,y,0)
-						setColor(nil,nil,1 - y)
+						value:WaitForChild("Marker").Position = UDim2.new(0.5, 0, y, 0)
+						setColor(nil, nil, 1 - y)
 					end
 				end
 			end
 			mouse.Move:connect(updateRGB)
-			mouse.Button1Down:connect(function()mouse1down = true end)
-			mouse.Button1Up:connect(function()mouse1down = false end)
+			mouse.Button1Down:connect(function()
+				mouse1down = true
+			end)
+			mouse.Button1Up:connect(function()
+				mouse1down = false
+			end)
 			colorpickerbuttontemplate.ColorButton.MouseButton1Click:Connect(function()
 				colorpickertemplate.Visible = true
 			end)			
@@ -2248,7 +2254,8 @@ function lib:CreateWindow(windowname, theme)
 			end
 
 			function colorpicker:Remove()
-				funv = function() end
+				funv = function()
+				end
 				colorpickertemplate:Destroy()
 				colorpickerbuttontemplate:Destroy()
 				UpdateSize()
