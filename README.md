@@ -43,7 +43,7 @@ local CurrentTheme = Window:GetTheme()
 ```
 Window:SetTheme("BlueTheme")
 ```
-You can also add your own themes by using the code below. Change the colors to whatever you like.
+You can also add your own themes by using the code below. You change the colors to whatever you like!
 ```
 local NewTheme = {
 		TabColor = Color3.fromRGB(50, 50, 50),
@@ -272,7 +272,7 @@ ColorPicker:Remove()
 ```
 <br />
 
-## Adding A fully customizable UI
+## Adding A Fully Customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
 ```
 local theme = Window:GetTheme()
