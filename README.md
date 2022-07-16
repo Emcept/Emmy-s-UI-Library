@@ -6,6 +6,8 @@
 `local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()`
 
 
+
+
 ## Creating Window
 `local Window = Library:CreateWindow("Title", "DarkTheme")`
 
@@ -43,6 +45,7 @@
 
 
 
+
 ## Creating Tabs
 `local Tab = Window:AddTab("TabName")`
 
@@ -53,6 +56,8 @@
 `Tab:Remove()`
 
 
+
+
 ## Creating Text Labels
 `local TextLabel = Tab:AddTextLabel("LabelText")`
 
@@ -61,6 +66,8 @@
 
 ## Removing Text Labels
 `TextLabel:Remove()`
+
+
 
 
 ## Creating Text Buttons
@@ -77,6 +84,8 @@ end)`
 `TextButton:Remove()`
 
 
+
+
 ## Creating Text Boxes
 `local TextBox = Tab:AddTextBox("TextBoxText", "TextBox Info", "DefaultText", function(Text)
 print(Text)
@@ -84,11 +93,13 @@ end)`
 
 ## Updating Text Boxes
 `TextBox:UpdateTextBox("NewTextBoxText", "New TextBox Info", "New Default Text", function(text)
-print("You typed "..text)
+print("You typed "..text)`
 end)
 
 ## Removing Text Boxes
 `TextBox:Remove()`
+
+
 
 
 ## Creating Sliders
@@ -105,6 +116,8 @@ end)`
 `Slider:Remove()`
 
 
+
+
 ## Creating Keybinds
 `local Keybind = Tab:AddKeybind("KeybindText", "KeybindInfo", "E", function(key)
 print("You clicked the bind ("..key..")")
@@ -117,6 +130,8 @@ end)`
 
 ## Removing Keybinds
 `Keybind:Remove()`
+
+
 
 
 ## Creating Toggles
@@ -134,3 +149,5 @@ end)`
 
 ## Removing Toggles
 `Toggle:Remove()`
+
+## Creating Dropdowns
