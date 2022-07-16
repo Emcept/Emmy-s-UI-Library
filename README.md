@@ -9,17 +9,17 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcep
 ```
 local Window = Library:CreateWindow("Title", "DarkTheme")
 ```
-<br /><br />
+
 ## Updating Window
 ```
 Window:UpdateWindow("NewTitle", "PurpleTheme")
 ```
-<br /><br />
+
 ## Removing Window
 ```
 Window:Remove()
 ```
-<br /><br />
+
 ### Themes:
 
 > DarkTheme  
@@ -31,12 +31,12 @@ Window:Remove()
 > GreenTheme  
 > OrangeTheme  
 > TealTheme
-<br /><br />
+
 ## Getting Current Window's Theme
 ```
 local CurrentTheme = Window:GetTheme()
 ```
-<br /><br />
+
 ## Changing Window's Theme
 ```
 Window:SetTheme("BlueTheme")
@@ -54,7 +54,7 @@ local NewTheme = {
 Window:SetTheme(NewTheme)
 ```
 
-
+<br /><br />
 
 ## Creating Tabs
 ```
@@ -71,7 +71,7 @@ Tab:UpdateTab("NewTabName")
 Tab:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Text Labels
@@ -89,7 +89,7 @@ TextLabel:UpdateTextLabel("NewLabelText")
 TextLabel:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Text Buttons
@@ -111,7 +111,7 @@ end)
 TextButton:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Text Boxes
@@ -133,7 +133,7 @@ end)
 TextBox:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Sliders
@@ -155,7 +155,7 @@ end)
 Slider:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Keybinds
@@ -177,7 +177,7 @@ end)
 Keybind:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Toggles
@@ -202,7 +202,7 @@ end)
 Toggle:Remove()
 ```
 
-
+<br /><br />
 
 
 ## Creating Dropdowns
@@ -243,6 +243,7 @@ end)
 Dropdown:Remove()
 ```
 
+<br /><br />
 
 
 ## Creating Color Pickers
@@ -266,6 +267,7 @@ end)
 ```
 ColorPicker:Remove()
 ```
+<br />
 
 ## Adding A fully customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
