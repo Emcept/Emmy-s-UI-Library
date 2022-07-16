@@ -267,7 +267,7 @@ end)
 ```
 ColorPicker:Remove()
 ```
-<br />
+<br /><br />
 
 ## Adding A fully customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
