@@ -10,31 +10,31 @@
 ## Updating Window
 `Window:UpdateWindow("NewTitle", "PurpleTheme")`
 
+## Removing Window
+`Window:Remove()`
+
 ##### Themes:
 
 > DarkTheme
-> 
+######
 > LightTheme
-> 
+######
 > BlueTheme
-> 
+######
 > PurpleTheme
-> 
+######
 > PinkTheme
-> 
+######
 > RedTheme
-> 
+######
 > GreenTheme
-> 
+######
 > OrangeTheme
-> 
+######
 > TealTheme
 
 ## Getting Current Window's Theme
 `local CurrentTheme = Window:GetTheme()`
 
-## Changing window's theme
+## Changing Window's Theme
 `Window:SetTheme("BlueTheme")`
-
-## Removing Window
-`Window:Remove()`
