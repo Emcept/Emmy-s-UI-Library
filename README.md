@@ -46,156 +46,216 @@ Window:Remove()
 > TealTheme
 
 ## Getting Current Window's Theme
-`local CurrentTheme = Window:GetTheme()`
+```
+local CurrentTheme = Window:GetTheme()
+```
 
 ## Changing Window's Theme
-`Window:SetTheme("BlueTheme")`
+```
+Window:SetTheme("BlueTheme")
+```
 
 
 
 
 ## Creating Tabs
-`local Tab = Window:AddTab("TabName")`
+```
+local Tab = Window:AddTab("TabName")
+```
 
 ## Updating Tabs
-`Tab:UpdateTab("NewTabName")`
+```
+Tab:UpdateTab("NewTabName")
+```
 
 ## Removing Tabs
-`Tab:Remove()`
+```
+Tab:Remove()
+```
 
 
 
 
 ## Creating Text Labels
-`local TextLabel = Tab:AddTextLabel("LabelText")`
+```
+local TextLabel = Tab:AddTextLabel("LabelText")
+```
 
 ## Updating Text Labels
-`TextLabel:UpdateTextLabel("NewLabelText")`
+```
+TextLabel:UpdateTextLabel("NewLabelText")
+```
 
 ## Removing Text Labels
-`TextLabel:Remove()`
+```
+TextLabel:Remove()
+```
 
 
 
 
 ## Creating Text Buttons
-`local TextButton = Tab:AddTextButton("ButtonText", "Button Info", function()
+```
+local TextButton = Tab:AddTextButton("ButtonText", "Button Info", function()
 print("Clicked!")
-end)`
+end)
+```
 
 ## Updating Text Buttons
-`TextButton:UpdateTextButton("NewButtonText" "New Button Info, function()
+```
+TextButton:UpdateTextButton("NewButtonText" "New Button Info, function()
 print("Button Pressed!")
-end)`
+end)
+```
 
 ## Removing Text Buttons
-`TextButton:Remove()`
+```
+TextButton:Remove()
+```
 
 
 
 
 ## Creating Text Boxes
-`local TextBox = Tab:AddTextBox("TextBoxText", "TextBox Info", "DefaultText", function(Text)
+```
+local TextBox = Tab:AddTextBox("TextBoxText", "TextBox Info", "DefaultText", function(Text)
 print(Text)
-end)`
+end)
+```
 
 ## Updating Text Boxes
-`TextBox:UpdateTextBox("NewTextBoxText", "New TextBox Info", "New Default Text", function(text)
-print("You typed "..text)`
+```
+TextBox:UpdateTextBox("NewTextBoxText", "New TextBox Info", "New Default Text", function(text)
+print("You typed "..text)
 end)
+```
 
 ## Removing Text Boxes
-`TextBox:Remove()`
+```
+TextBox:Remove()
+```
 
 
 
 
 ## Creating Sliders
-`local Slider = Tab:AddSlider("WalkSpeed", "Changes your WalkSpeed", 16, 200, function(speed)
+```
+local Slider = Tab:AddSlider("WalkSpeed", "Changes your WalkSpeed", 16, 200, function(speed)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
- end)`
+end)
+```
  
 ## Updating Sliders
-`Slider:UpdateSlider("NewSliderText", "SliderInfo", 0, 100, function(value)
+```
+Slider:UpdateSlider("NewSliderText", "SliderInfo", 0, 100, function(value)
 print(value)
-end)`
+end)
+```
 
 ## Removing Sliders
-`Slider:Remove()`
+```
+Slider:Remove()
+```
 
 
 
 
 ## Creating Keybinds
-`local Keybind = Tab:AddKeybind("KeybindText", "KeybindInfo", "E", function(key)
+```
+local Keybind = Tab:AddKeybind("KeybindText", "KeybindInfo", "E", function(key)
 print("You clicked the bind ("..key..")")
-end)`
+end)
+```
 
 ## Updating Keybinds
-`Keybind:UpdateKeybind("ToggleUI", "Toggles the Window UI", "G", function()
+```
+Keybind:UpdateKeybind("ToggleUI", "Toggles the Window UI", "G", function()
 Window:ToggleUI()
-end)`
+end)
+```
 
 ## Removing Keybinds
-`Keybind:Remove()`
+```
+Keybind:Remove()
+```
 
 
 
 
 ## Creating Toggles
-`local Toggle = Tab:AddToggle("ToggleText", "ToggleInfo", function(State)
+```
+local Toggle = Tab:AddToggle("ToggleText", "ToggleInfo", function(State)
 if State then
 print("Toggle On")
 else
 print("Toggle Off")
-end)`
+end)
+```
 
 ## Updating Toggles
-`Toggle:UpdateToggle("NewToggleText", "NewToggleInfo", function(state)
+```
+Toggle:UpdateToggle("NewToggleText", "NewToggleInfo", function(state)
 print(state)
-end)`
+end)
+```
 
 ## Removing Toggles
-`Toggle:Remove()`
+```
+Toggle:Remove()
+```
 
 
 
 
 ## Creating Dropdowns
-`local Dropdown = Tab:AddDropdown("Select option...", "Dropdown Info", {"Yes", "No"}, function(SelectedOption)
+```
+local Dropdown = Tab:AddDropdown("Select option...", "Dropdown Info", {"Yes", "No"}, function(SelectedOption)
 print(SelectedOption)
-end)`
+end)
+```
 
 
 ## Getting All Dropdown's Options
-`local Options = Dropdown:GetOptions()
+```
+local Options = Dropdown:GetOptions()
 for i, option in pairs(Options) do
 print(option)
-end`
+end
+```
 
 ## Adding an Option to the Dropdowns
-`Dropdown:AddOption("Maybe")`
+```
+Dropdown:AddOption("Maybe")
+```
 
 ## Removing an Option from Dropdowns
-`Dropdown:RemoveOption("No")`
+```
+Dropdown:RemoveOption("No")
+```
 
 ## Updating Dropdowns
-`Dropdown:UpdateDropdown("Choose option...", "New Dropdown Info", {"Dog", "Cat"}, function(Option)
+```
+Dropdown:UpdateDropdown("Choose option...", "New Dropdown Info", {"Dog", "Cat"}, function(Option)
 print('You have selected "'..Option..'"')
-end)`
+end)
+```
 
 ## Removing Dropdowns
-`Dropdown:Remove()`
+```
+Dropdown:Remove()
+```
 
 
 
 ## Creating Color Pickers
-`local part = Instance.new("Part", game:GetService("Workspace"))
+```
+local part = Instance.new("Part", game:GetService("Workspace"))
 part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
 local ColorPicker = Tab:AddColorPicker("ColorPickerText", "Color Picker Info", Color3.fromRGB(255, 255, 255), function(color)
 part.Color = color
-end)`
+end)
+```
 
 ## Updating Color Pickers
 ```
@@ -205,5 +265,6 @@ end)
 ```
 
 ## Removing Color Pickers
+```
 ColorPicker:Remove()
-
+```
