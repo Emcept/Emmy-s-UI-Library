@@ -4,7 +4,7 @@
 ```
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
 ```
-<br /><br /><br /><br />
+
 ## Creating Window
 ```
 local Window = Library:CreateWindow("Title", "DarkTheme")
@@ -31,7 +31,7 @@ Window:Remove()
 > OrangeTheme  
 > TealTheme
 
-<br /><br />
+
 ## Getting Current Window's Theme
 ```
 local CurrentTheme = Window:GetTheme()
@@ -54,7 +54,7 @@ local NewTheme = {
 Window:SetTheme(NewTheme)
 ```
 
-<br /><br /><br /><br />
+
 
 ## Creating Tabs
 ```
@@ -71,7 +71,7 @@ Tab:UpdateTab("NewTabName")
 Tab:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Text Labels
@@ -89,7 +89,7 @@ TextLabel:UpdateTextLabel("NewLabelText")
 TextLabel:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Text Buttons
@@ -111,7 +111,7 @@ end)
 TextButton:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Text Boxes
@@ -133,7 +133,7 @@ end)
 TextBox:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Sliders
@@ -155,7 +155,7 @@ end)
 Slider:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Keybinds
@@ -177,7 +177,7 @@ end)
 Keybind:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Toggles
@@ -202,7 +202,7 @@ end)
 Toggle:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Dropdowns
@@ -243,7 +243,7 @@ end)
 Dropdown:Remove()
 ```
 
-<br /><br /><br /><br />
+
 
 
 ## Creating Color Pickers
@@ -267,7 +267,7 @@ end)
 ```
 ColorPicker:Remove()
 ```
-<br /><br />
+
 
 ## Adding A fully customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
