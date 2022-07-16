@@ -191,7 +191,7 @@ end)`
 
 ## Updating Color Pickers
 ```
-ColorPicker:UpdateColorPicker("NewColorPickerText", "New Color Picker Info", Color3.fromRGB(0, 0, 0), function(color)` <br\>
+ColorPicker:UpdateColorPicker("NewColorPickerText", "New Color Picker Info", Color3.fromRGB(0, 0, 0), function(color)
 print(color.R, color.G, color.B)
 end)```
 
