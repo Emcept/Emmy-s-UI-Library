@@ -132,6 +132,10 @@ function lib:CreateWindow(windowname, theme)
 			end
 		end
 	end
+	
+	function window:GetTheme()
+		return theme
+	end
 
 
 	theme = totheme(theme)
@@ -237,7 +241,7 @@ function lib:CreateWindow(windowname, theme)
 			end
 		end
 	end
-
+	
 
 	local function enableripple(v)
 		v.MouseButton1Click:Connect(function()
@@ -1014,6 +1018,16 @@ function lib:CreateWindow(windowname, theme)
 					setsize()
 					UpdateSize2()
 				end
+			end
+			
+			function dropdown:GetOptions()
+				local Options = {}
+				for i, v in pairs(dropdowntemplate.Dropdown.Options:GetChildren()) do
+					if v:IsA'TextButton' then
+						table.insert(Options, v)
+					end
+				end
+				return Options
 			end
 
 			function dropdown:Remove()
