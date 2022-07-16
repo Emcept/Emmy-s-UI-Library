@@ -9,17 +9,17 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcep
 ```
 local Window = Library:CreateWindow("Title", "DarkTheme")
 ```
-<br />
+<br /><br />
 ## Updating Window
 ```
 Window:UpdateWindow("NewTitle", "PurpleTheme")
 ```
-<br />
+<br /><br />
 ## Removing Window
 ```
 Window:Remove()
 ```
-<br />
+<br /><br />
 ### Themes:
 
 > DarkTheme  
@@ -31,12 +31,12 @@ Window:Remove()
 > GreenTheme  
 > OrangeTheme  
 > TealTheme
-<br />
+<br /><br />
 ## Getting Current Window's Theme
 ```
 local CurrentTheme = Window:GetTheme()
 ```
-<br />
+<br /><br />
 ## Changing Window's Theme
 ```
 Window:SetTheme("BlueTheme")
