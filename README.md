@@ -3,19 +3,27 @@
 
 
 ## Getting Loadstring
-`local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()`
+```
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
+```
 
 
 
 
 ## Creating Window
-`local Window = Library:CreateWindow("Title", "DarkTheme")`
+```
+local Window = Library:CreateWindow("Title", "DarkTheme")
+```
 
 ## Updating Window
-`Window:UpdateWindow("NewTitle", "PurpleTheme")`
+```
+Window:UpdateWindow("NewTitle", "PurpleTheme")
+```
 
 ## Removing Window
-`Window:Remove()`
+```
+Window:Remove()
+```
 
 ### Themes:
 
