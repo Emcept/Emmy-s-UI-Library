@@ -12,13 +12,21 @@
 
 ##### Themes:
 > DarkTheme
+> 
 > LightTheme
+> 
 > BlueTheme
+> 
 > PurpleTheme
+> 
 > PinkTheme
+> 
 > RedTheme
+> 
 > GreenTheme
+> 
 > OrangeTheme
+> 
 > TealTheme
 
 ## Getting Current Window's Theme
