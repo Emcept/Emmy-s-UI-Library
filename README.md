@@ -275,7 +275,7 @@ ColorPicker:Remove()
 ## Adding A fully customizable UI
 You can also add an option to customize your UI by adding the code below to your tab.
 ```
-local theme = window:GetTheme()
+local theme = Window:GetTheme()
 
 for i, v in pairs(theme) do
 	Tab:AddColorPicker(i, "Changes "..i.."'s theme", v, function(color3)
