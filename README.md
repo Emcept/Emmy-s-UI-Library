@@ -6,4 +6,4 @@
 #### Creating Window
 > local Window = Library:CreateWindow(WindowName, Theme)
 ###### Example:
-`local Window = Library:CreateWindow("Emmy's UI Library", "DarkTheme")
+> `local Window = Library:CreateWindow("Emmy's UI Library", "DarkTheme")`
