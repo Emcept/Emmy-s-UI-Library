@@ -31,7 +31,7 @@ Window:Remove()
 > OrangeTheme  
 > TealTheme
 
-<br /><br /><br /><br />
+<br /><br />
 ## Getting Current Window's Theme
 ```
 local CurrentTheme = Window:GetTheme()
