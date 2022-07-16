@@ -2,7 +2,7 @@
 
 
 
-## Getting loadstring
+## Getting Loadstring
 `local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()`
 
 
@@ -43,18 +43,35 @@
 
 
 
-## Creating Tab
+## Creating Tabs
 `local Tab = Window:AddTab("TabName")`
 
-## Updating Tab
+## Updating Tabs
 `Tab:UpdateTab("NewTabName")`
 
-## Removing Tab
+## Removing Tabs
 `Tab:Remove()`
 
 
-## Creating Label
-`local Label = Tab:AddTextLabel("LabelText")`
+## Creating Text Labels
+`local TextLabel = Tab:AddTextLabel("LabelText")`
 
-## Updating Label
-`Label:UpdateTextLabel("NewLabelText")`
+## Updating Text Labels
+`TextLabel:UpdateTextLabel("NewLabelText")`
+
+## Removing Text Labels
+`TextLabel:Remove()`
+
+
+## Creating Text Buttons
+`local TextButton = Tab:AddTextButton("ButtonText", "Button Info", function()
+print("Clicked!")
+end)`
+
+## Updating Text Buttons
+`TextButton:UpdateTextButton("NewButtonText", function()
+print("Button Pressed!")
+end)`
+
+## Removing Text Buttons
+`TextButton:Remove()`
