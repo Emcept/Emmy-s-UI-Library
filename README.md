@@ -4,6 +4,6 @@
 `local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()`
 
 #### Creating Window
-> local Window = Library:CreateWindow(WindowName, Theme)
+`local Window = Library:CreateWindow(WindowName, Theme)`
 ###### Example:
-> `local Window = Library:CreateWindow("Emmy's UI Library", "DarkTheme")`
+`local Window = Library:CreateWindow("Emmy's UI Library", "DarkTheme")`
