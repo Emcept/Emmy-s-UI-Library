@@ -150,4 +150,31 @@ end)`
 ## Removing Toggles
 `Toggle:Remove()`
 
+
+
+
 ## Creating Dropdowns
+`local Dropdown = Tab:AddDropdown("Select option...", "Dropdown Info", {"Yes", "No"}, function(SelectedOption)
+print(SelectedOption)
+end)`
+
+
+## Getting All Dropdown's Options
+`local Options = Dropdown:GetOptions()
+for i, option in pairs(Options) do
+print(option)
+end`
+
+## Adding an Option to the Dropdowns
+`Dropdown:AddOption("Maybe")`
+
+## Removing an Option from Dropdowns
+`Dropdown:RemoveOption("No")`
+
+## Updating Dropdowns
+`Dropdown:UpdateDropdown("Choose option...", "New Dropdown Info", {"Dog", "Cat"}, function(Option)
+print('You have selected "'..Option..'"')
+end)`
+
+## Removing Dropdowns
+`Dropdown:Remove()`
