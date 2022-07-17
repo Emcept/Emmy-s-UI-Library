@@ -1,4 +1,3 @@
-
 local lib = {}
 local rippleeffect = true
 
@@ -84,7 +83,7 @@ local themes = {
 }
 
 
-function lib:CreateWindow(windowname, theme)
+function lib:AddWindow(windowname, theme)
 
 	local windowtemplate = Instance.new("ScreenGui")
 
@@ -1083,12 +1082,12 @@ function lib:CreateWindow(windowname, theme)
 
 				--Properties:
 
-				textlabeltemplate.Name = text
+				textlabeltemplate.Name = tostring(texxt)
 				textlabeltemplate.BackgroundColor3 = theme.ElementColor
 				textlabeltemplate.Position = UDim2.new(0.149748906, 0, 0.11745514, 0)
 				textlabeltemplate.Size = UDim2.new(0, 264, 0, 30)
 				textlabeltemplate.Font = Enum.Font.Ubuntu
-				textlabeltemplate.Text = "Text"
+				textlabeltemplate.Text = tostring(texxt)
 				textlabeltemplate.TextColor3 = theme.TextColor
 				textlabeltemplate.TextSize = 20.000
 				textlabeltemplate.TextWrapped = true
@@ -1314,7 +1313,7 @@ function lib:CreateWindow(windowname, theme)
 			val.Position = UDim2.new(0.428224057, 0, 0.233333349, 0)
 			val.Size = UDim2.new(0, 30, 0, 16)
 			val.Font = Enum.Font.GothamMedium
-			val.Text = "92"
+			val.Text = "0"
 			val.TextColor3 = theme.TextColor
 			val.TextScaled = true
 			val.TextSize = 14.000
