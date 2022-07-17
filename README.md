@@ -9,7 +9,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcep
 <br /><br />
 ## Creating Window
 ```
-local Window = Library:CreateWindow("Title", "DarkTheme")
+local Window = Library:AddWindow("Title", "DarkTheme")
 ```
 
 ## Updating Window
