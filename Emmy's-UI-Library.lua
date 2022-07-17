@@ -1531,7 +1531,7 @@ function lib:AddWindow(windowname, theme)
 			TextBox.Size = UDim2.new(0, 99, 0, 22)
 			TextBox.ClearTextOnFocus = false
 			TextBox.Font = Enum.Font.Ubuntu
-			TextBox.PlaceholderColor3 = Color3.fromRGB(theme.TextColor.R - 20, theme.TextColor.G - 20, theme.TextColor.B - 20)
+			TextBox.PlaceholderColor3 = theme.TextColor
 			TextBox.PlaceholderText = tostring(defaulttext)
 			TextBox.Text = ""
 			TextBox.TextColor3 = theme.TextColor
