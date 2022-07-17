@@ -231,7 +231,7 @@ function lib:AddWindow(windowname, theme)
 							end
 						end
 						if b:IsA'ScrollingFrame' then
-							b.ScrollBarImageColor3 = theme.TextColor
+							b.ScrollBarImageColor3 = theme.ImageColor
 						end
 						if b.Name == 'Toggle' and b:IsA'ImageLabel' then
 							b.ImageColor3 = theme.ImageColor
@@ -462,9 +462,10 @@ function lib:AddWindow(windowname, theme)
 		Objects.BorderColor3 = Color3.fromRGB(255, 255, 255)
 		Objects.BorderSizePixel = 0
 		Objects.Position = UDim2.new(0, 0, 0.0250000786, 0)
-		Objects.Size = UDim2.new(0, 279, 0, 225)
+		Objects.Size = UDim2.new(0, 279, 0, 220)
 		Objects.CanvasSize = UDim2.new(0, 0, 0, 0)
 		Objects.ScrollBarThickness = 3
+		Objects.ScrollBarImageColor3 = theme.ImageColor
 
 		UIListLayout.Parent = Objects
 		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -493,7 +494,7 @@ function lib:AddWindow(windowname, theme)
 			menutemplate.Size = UDim2.new(0, 119, 0, 221)
 			menutemplate.CanvasSize = UDim2.new(0, 0, 0, 0)
 			menutemplate.ScrollBarThickness = 3
-			menutemplate.ScrollBarImageColor3 = theme.TextColor
+			menutemplate.ScrollBarImageColor3 = theme.ImageColor
 
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -785,8 +786,9 @@ function lib:AddWindow(windowname, theme)
 			Options.Size = UDim2.new(0, 264, 0, 0)
 			Options.CanvasSize = UDim2.new(0, 0, 0, 0)
 			Options.ScrollBarThickness = 3
-			Options.ScrollBarImageColor3 = theme.TextColor
+			Options.ScrollBarImageColor3 = theme.ImageColor
 			Options.ScrollingDirection = 'Y'
+			Options.ClipsDescendants = false
 
 			UIListLayout.Parent = Options
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -1529,7 +1531,7 @@ function lib:AddWindow(windowname, theme)
 			TextBox.Size = UDim2.new(0, 99, 0, 22)
 			TextBox.ClearTextOnFocus = false
 			TextBox.Font = Enum.Font.Ubuntu
-			TextBox.PlaceholderColor3 = theme.TextColor
+			TextBox.PlaceholderColor3 = Color3.fromRGB(theme.TextColor.R - 20, theme.TextColor.G - 20, theme.TextColor.B - 20)
 			TextBox.PlaceholderText = tostring(defaulttext)
 			TextBox.Text = ""
 			TextBox.TextColor3 = theme.TextColor
